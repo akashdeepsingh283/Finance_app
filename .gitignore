@@ -1,23 +1,75 @@
-node_modules
-dist
+# ============================================
+#  Environment / secrets - NEVER commit these
+# ============================================
 .env
 .env.local
+.env.development
+.env.test
+.env.production
 .env.*
-
+*.env
 !.env.example
+!.env.*.example
 
-# Backend
-backend/.env
-backend/node_modules
+# Credentials, keys, certificates & config
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.crt
+*.cer
+*.der
+*.pub
+*.secret
+config.json
+config/local.*
+secrets/
+credentials/
+serviceAccount*.json
+google-*.json
+id_rsa*
 
-# Frontend
-frontend/node_modules
-frontend/dist
-
-# Logs
+# ============================================
+#  Build output / dependencies
+# ============================================
+node_modules
+dist
+build
+*.log
+*.log.*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# OS
+# ============================================
+#  OS / editor / IDE files
+# ============================================
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+.history
+
+# ============================================
+#  Backend (specific)
+# ============================================
+backend/.env
+backend/node_modules
+backend/dist
+
+# ============================================
+#  Frontend (specific)
+# ============================================
+frontend/node_modules
+frontend/dist
+frontend/.env
+frontend/.env.local
